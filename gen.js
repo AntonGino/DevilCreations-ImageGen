@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
             requestOptions = {
                 headers: {
-                    Authorization: `Bearer ${HF_API_KEY}`,
+                    Authorization: Bearer ${HF_API_KEY},
                     "Content-Type": "application/json",
                 },
                 method: "POST",
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             const response = await fetch(modelUrl, requestOptions);
 
             if (!response.ok) {
-                throw new Error(`API request failed with status ${response.status}`);
+                throw new Error(API request failed with status ${response.status});
             }
 
             return await response.blob();
@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 </div>
             </div>
         `;
-        generateButton.innerHTML = `<span class="spinner"></span> Generating...`;
+        generateButton.innerHTML = <span class="spinner"></span> Generating...;
         generateButton.disabled = true;
     };
 
@@ -615,4 +615,4 @@ document.addEventListener('DOMContentLoaded', async function () {
             modelsMenu.classList.add('open');
         }
     });
-});
+})
